@@ -23,12 +23,12 @@
 		
 		wlan5g {
 			label = "sw5g";
-			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 		};
 
 		wlan2g {
 			label = "sw2g";
-			gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
 		};
 	};
 	
