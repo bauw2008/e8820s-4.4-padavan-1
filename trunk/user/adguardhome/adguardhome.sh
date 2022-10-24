@@ -62,9 +62,9 @@ adg_file="/etc/storage/adg.sh"
 if [ ! -f "$adg_file" ] || [ ! -s "$adg_file" ] ; then
 	cat > "$adg_file" <<-\EEE
 bind_host: 0.0.0.0
-bind_port: 3030
-auth_name: adguardhome
-auth_pass: adguardhome
+bind_port: 3000
+auth_name: admin	
+auth_pass: admin
 language: zh-cn
 rlimit_nofile: 0
 dns:
@@ -79,7 +79,9 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   bootstrap_dns:
-  - 223.5.5.5
+  - 202.98.198.167
+  - 202.98.192.67
+  - 114.114.114.114
   all_servers: true
   allowed_clients: []
   disallowed_clients: []
@@ -90,7 +92,9 @@ dns:
   safebrowsing_enabled: false
   resolveraddress: ""
   upstream_dns:
+  - 119.29.29.29
   - 223.5.5.5
+  - 114.114.114.114
 tls:
   enabled: false
   server_name: ""
@@ -108,6 +112,14 @@ filters:
   url: https://adaway.org/hosts.txt
   name: AdAway
   id: 2
+- enabled: false
+  url: https://anti-ad.net/easylist.txt
+  name: 'CHN: anti-AD'
+  id: 1666257450
+- enabled: true
+  url: https://cats-team.github.io/AdRules/dns.txt
+  name: AdRules
+  id: 1666257451
 user_rules: []
 dhcp:
   enabled: false
@@ -131,20 +143,20 @@ fi
 
 
 start_adg(){
-    mkdir -p /tmp/AdGuardHome
+    mkdir -p /opt/tmp/AdGuardHome
 	mkdir -p /etc/storage/AdGuardHome
-	if [ ! -f "/tmp/AdGuardHome/AdGuardHome" ]; then
-	cp /usr/bin/AdGuardHome /tmp/AdGuardHome/AdGuardHome
+	if [ ! -f "/opt/tmp/AdGuardHome/AdGuardHome" ]; then
+	cp /usr/bin/AdGuardHome /opt/tmp/AdGuardHome/AdGuardHome
 	fi
 	getconfig
 	change_dns
 	set_iptable
 	logger -t "AdGuardHome" "运行AdGuardHome"
-	eval "/tmp/AdGuardHome/AdGuardHome -c $adg_file -w /tmp/AdGuardHome -v" &
+	eval "/opt/tmp/AdGuardHome/AdGuardHome -c $adg_file -w /opt/tmp/AdGuardHome -v" &
 
 }
 stop_adg(){
-rm -rf /tmp/AdGuardHome
+rm -rf /opt/tmp/AdGuardHome
 killall -9 AdGuardHome
 del_dns
 clear_iptable
