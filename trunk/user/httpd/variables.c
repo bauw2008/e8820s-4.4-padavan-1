@@ -197,25 +197,6 @@
 		};
 #endif
 
-
-	 struct variable variables_DwebConf[] = {
-	        {"w_ai", "", NULL, FALSE},
-			{"w_vpn_s", "", NULL, FALSE},
-			{"w_vpn_c", "", NULL, FALSE},
-			{"w_wnet", "", NULL, FALSE},
-			{"w_sys", "", NULL, FALSE},
-			{"w_usb", "", NULL, FALSE},
-			{"w_net", "", NULL, FALSE},
-			{"w_log", "", NULL, FALSE},
-			{"w_scu", "", NULL, FALSE},
-			{"w_dnsf", "", NULL, FALSE},
-			{"w_ss", "", NULL, FALSE},
-			{"w_men", "", NULL, FALSE},
-			{"w_adbyby", "", NULL, FALSE},
-			{"w_pdnsd", "", NULL, FALSE},
-
-	};
-
 	struct variable variables_WLANConfig11b_rt_RBRList[] = {
 			{"rt_wdslist_x", "12", NULL, EVM_RESTART_WIFI2},
 			{0,0,0,0}
@@ -1209,6 +1190,24 @@
 			{"SdnsList", "Group", ARGV((char*)variables_SmartdnsConf_SdnsList, "8", "55", "sdnss_staticnum_x"), EVM_RESTART_SMARTDNS},
 	};
 #endif
+
+    struct variable variables_DwebConf[] = {
+	                {"w_ai", "", NULL, FALSE},
+			{"w_vpn_s", "", NULL, FALSE},
+			{"w_vpn_c", "", NULL, FALSE},
+			{"w_wnet", "", NULL, FALSE},
+			{"w_sys", "", NULL, FALSE},
+			{"w_usb", "", NULL, FALSE},
+			{"w_net", "", NULL, FALSE},
+			{"w_log", "", NULL, FALSE},
+			{"w_scu", "", NULL, FALSE},
+			{"w_dnsf", "", NULL, FALSE},
+			{"w_ss", "", NULL, FALSE},
+			{"w_men", "", NULL, FALSE},
+			{"w_adbyby", "", NULL, FALSE},
+			{"w_pdnsd", "", NULL, FALSE},
+
+	};
 	struct variable variables_WLANConfig11b[] = {
 			{"rt_ssid", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_ssid2", "", NULL, EVM_RESTART_WIFI2},
@@ -1479,4 +1478,5 @@
 		{EVM_RESTART_FIREWALL,		EVT_RESTART_FIREWALL,		RCN_RESTART_FIREWALL,	0},
 		{0,0,0,0}
 	};
+
 
