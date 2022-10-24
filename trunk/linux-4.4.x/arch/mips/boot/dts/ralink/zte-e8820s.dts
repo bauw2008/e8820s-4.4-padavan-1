@@ -20,15 +20,10 @@
 			label = "power";
 			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
 		};
-		
-		wlan5g {
-			label = "sw5g";
-			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
-		};
 
-		wlan2g {
-			label = "sw2g";
-			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
+		sys {
+			label = "sys";
+			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
 		};
 	};
 	
@@ -51,7 +46,7 @@
 		};
 		
 		wifi {
-			label = "wifi";
+			label = "fn1";
 			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_RFKILL>;
 		};
