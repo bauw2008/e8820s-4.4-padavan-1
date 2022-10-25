@@ -45,11 +45,12 @@
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 		
-		wifi {
+		fn1 { 
 			label = "fn1";
 			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-			linux,code = <KEY_RFKILL>;
+			linux,code = <KEY_FN_1>;
 		};
+		
 	};
 	
 };
