@@ -5,6 +5,6 @@ MeIsReallyBa/padavan-4.4 基础上修改
 
 2.udpxy替换msd_lite
 
-3.adguardhome 版本核心107 端口3000 admin/admin
+3.adguardhome u盘启动 端口3000 admin/admin
 
 4.添加chongshengB/rt-n56u菜单定制。
