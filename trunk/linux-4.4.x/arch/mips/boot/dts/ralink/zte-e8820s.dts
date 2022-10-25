@@ -26,14 +26,14 @@
 			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
 		};
 
-		net0 {
+		wlan2g {
 			label = "net0";
-			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
 		};
 
-		net1 {
+		wlan5g  {
 			label = "net1";
-			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 		};
 	};
 	
