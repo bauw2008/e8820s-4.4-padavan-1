@@ -16,23 +16,23 @@
 	leds {
 		compatible = "gpio-leds";
     
-    		led_power {
+    		power {
 			label = "power";
-			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
-		};
-
-		led_sys {
-			label = "sys";
 			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
 		};
 
-		wlan5g {
-			label = "sw5g";
+		sys {
+			label = "sys";
+			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+		};
+
+		net0 {
+			label = "net0";
 			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 		};
 
-		wlan2g {
-			label = "sw2g";
+		net1 {
+			label = "net1";
 			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
 		};
 	};
@@ -54,7 +54,7 @@
 			gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
-		
+
 		wifi {
 			label = "wifi";
 			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
