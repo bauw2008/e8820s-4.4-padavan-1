@@ -268,6 +268,10 @@ filters:
   url: https://cats-team.github.io/AdRules/dns.txt
   name: AdRules
   id: 1666257451
+- enabled: true
+  url: https://cats-team.github.io/AdRules/dns.txt
+  name: AdRules
+  id: 1666257451
 user_rules: []
 dhcp:
   enabled: false
