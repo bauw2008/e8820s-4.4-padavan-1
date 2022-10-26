@@ -9,4 +9,4 @@ MeIsReallyBa/padavan-4.4 基础上修改
 
 4.添加chongshengB/rt-n56u菜单定制。
 
-5.e8820s 无线led显示修复。
+5.e8820s 无线led灯显示修复。
