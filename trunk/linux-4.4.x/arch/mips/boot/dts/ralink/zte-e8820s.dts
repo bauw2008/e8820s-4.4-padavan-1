@@ -16,24 +16,9 @@
 	leds {
 		compatible = "gpio-leds";
     
-    		power {
+		sys_white {
 			label = "power";
-			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
-		};
-
-		sys {
-			label = "sys";
 			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
-		};
-
-		wlan2g {
-			label = "net0";
-			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
-		};
-
-		wlan5g  {
-			label = "net1";
-			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
 		};
 	};
 	
