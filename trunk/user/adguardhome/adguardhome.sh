@@ -144,7 +144,7 @@ fi
 
 start_adg(){
 	mkdir -p /etc/storage/AdGuardHome
-	chmod 777 /tmp/AdGuardHome/AdGuardHome
+	chmod 777 /apt/adg/AdGuardHome
 	fi
 	getconfig
 	change_dns
