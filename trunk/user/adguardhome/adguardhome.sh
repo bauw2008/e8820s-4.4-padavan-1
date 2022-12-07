@@ -143,21 +143,20 @@ fi
 
 
 start_adg(){
-        mkdir -p /opt/tmp/AdGuardHome
+    mkdir -p /tmp/AdGuardHome
 	mkdir -p /etc/storage/AdGuardHome
-	if [ ! -f "/opt/tmp/AdGuardHome/AdGuardHome" ]; then
-	cp /opt/adg/AdGuardHome /opt/tmp/AdGuardHome/AdGuardHome
-	chmod 777 /opt/tmp/AdGuardHome/AdGuardHome
+	if [ ! -f "/tmp/AdGuardHome/AdGuardHome" ]; then
+	cp /usr/bin/AdGuardHome /tmp/AdGuardHome/AdGuardHome
 	fi
 	getconfig
 	change_dns
 	set_iptable
 	logger -t "AdGuardHome" "运行AdGuardHome"
-	eval "/opt/tmp/AdGuardHome/AdGuardHome -c $adg_file -w /opt/tmp/AdGuardHome -v" &
+	eval "/tmp/AdGuardHome/AdGuardHome -c $adg_file -w /tmp/AdGuardHome -v" &
 
 }
 stop_adg(){
-rm -rf /opt/tmp/AdGuardHome
+rm -rf /tmp/AdGuardHome
 killall -9 AdGuardHome
 del_dns
 clear_iptable
